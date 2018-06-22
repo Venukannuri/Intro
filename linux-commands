@@ -92,8 +92,42 @@ $ mv --> Moving of file to file, file to directory, directory to directory and a
         
 $ rm --> Removing of file, directory
         rm / rmdir (Empty Dir)
-        $ rm -r dirname
+          $ rm -r dirname
+        
+User access & Identification commands:
 
+$ groupadd --> create a new group 
+            $ groupadd <group name>
+              eg: $ groupadd dba
+   How to find out group craeted or not
+         $ cat/etc/group | grep dbacd /home
+         
+$ passwd --> change the set password from existed user
+         $ passwd <user-name>
 
+$ useradd --> create new user
+         $ useradd <user-name>
+         
+$ chown --> Change the owenrship to File or Directory 
+         $ chown <user-name> <file/dir-name>
+           $ chown user1 file.txt
+             Chgrp:- Change the group ship to File or Directory
+
+$ Chgrp --> Change the group ship to File or Directory
+         $ chgrp <group name> <file/dir name>
+           eg:- $ chgrp dba test.txt
+
+$ Su --> Switching User
+         $su - <user name>( '-' means login)  
+           $ su – user1
+              $ exit 
+
+$ userdel --> Delete existed user
+         $userdel <user name>
+          eg:- $ userdel user1
+          
+$ groupdel --> Delete existed group
+       $ groupdel <group name>
+         eg:- $ groupdel dba
     
  
