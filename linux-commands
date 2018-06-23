@@ -129,5 +129,17 @@ $ userdel --> Delete existed user
 $ groupdel --> Delete existed group
        $ groupdel <group name>
          eg:- $ groupdel dba
-    
- 
+         
+File/Directory Permission:
+
+$ chmod --> Change the file permissions Read, Write, Execute in user, group, other levels
+            $ chmod <file/dir -name>
+             eg: $ chmod -R 755 <file/dir>
+             
+$ unmask --> set the default permission (System dafault permission 022)
+             $ unmask 022
+             
+Process management commands:
+             $ ps -->Report a snapshot of the current processes.
+                eg: $ ps -ef
+
