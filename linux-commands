@@ -1,4 +1,5 @@
- Linux Prompts:
+LINUX PROMPTS:
+ 
    $ --> Normal User
    # --> Root User (Administrator)**
    
@@ -6,18 +7,21 @@ Switch Normal user to Administrator --> su -
   fallowed by root password credentials navigates to root user.
   
 Linux Command Standard Syntax:
+
 Command-name {options} {inputs} 
 
 Dot (.) denotes present working directory 
 DotDot(..) denotes parent directory
 
-Options:
+
+OPTIONS:
+
     - <Single-Character>
     -- <Single-Word>
-
     Ex: uname --help
+    
 
-Information Commands:
+INFORMATION COMMANDS:
 
 $ date --> Display date
 $ cal --> Display Calendar
@@ -36,7 +40,8 @@ Optional:
 (* - All)
 # ls ? ( ? - one character)
 
-Directory commands:
+
+DIRECTORY COMMANDS:
 
 $ mkdir --> create new directory 
         $ mkdir <dir>
@@ -47,7 +52,8 @@ $ cd --> change directory
         $ cd <dir path>
 $ pwd --> present working directory 
 
-File manipulation commands:
+
+FILE MANIPULATION COMMANDS:
 
 $ touch --> Its create empty files
         $ touch <f1> <f2> <f3>...
@@ -93,8 +99,9 @@ $ mv --> Moving of file to file, file to directory, directory to directory and a
 $ rm --> Removing of file, directory
         rm / rmdir (Empty Dir)
           $ rm -r dirname
+          
         
-User access & Identification commands:
+USER ACCESS & IDENTIFICATION COMMANDS:
 
 $ groupadd --> create a new group 
             $ groupadd <group name>
@@ -130,7 +137,8 @@ $ groupdel --> Delete existed group
        $ groupdel <group name>
          eg:- $ groupdel dba
          
-File/Directory Permission:
+         
+FILE / DIRECTORY PERMISSIONS:
 
 $ chmod --> Change the file permissions Read, Write, Execute in user, group, other levels
             $ chmod <file/dir -name>
@@ -138,8 +146,123 @@ $ chmod --> Change the file permissions Read, Write, Execute in user, group, oth
              
 $ unmask --> set the default permission (System dafault permission 022)
              $ unmask 022
+            
              
-Process management commands:
-             $ ps -->Report a snapshot of the current processes.
+PROCESS MANAGEMENTCOMMANDS:
+
+$ ps -->Report a snapshot of the current processes.
                 eg: $ ps -ef
+                   -> See the complete content inside a file..
+                   
+$ grep --> grep command which stands for “global regular expression print
+           $ grep <search key> file-name
+
+
+FILTERS COMMANDS:
+
+$ more --> file perusal filter for current viewing
+          $ more <filename>
+              eg: $ more test
+
+$ less --> opposite of more
+           $ less <filename>
+              eg: $ less test
+
+$ sort --> sort lines of text files
+            $ sort <filename>
+               eg : $sort test
+
+$wc --> print the number of lines, words, and bytes in files
+          $ wc <optional> <filename>
+             eg : $ wc <file-name>
+                 -c, --bytes            print the byte counts
+                 -m, --chars            print the character counts
+                 -l, --lines            print the newline counts
+                     --files0-from=F    read input from the files specified by
+                                          NUL-terminated names in file F;
+                                          If F is - then read names from standard input
+                 -L, --max-line-length  print the length of the longest line
+                 -w, --words            print the word counts
+                     --help     display this help and exit
+                     --version  output version information and exit
+
+$ cat --> See the complete content inside a file..
+       $ cat file-name
+             -A, --show-all           equivalent to -vET
+             -b, --number-nonblank    number nonempty output lines, overrides -n
+             -e                       equivalent to -vE
+             -E, --show-ends          display $ at end of each line
+             -n, --number             number all output lines
+             -s, --squeeze-blank      suppress repeated empty output lines
+             -t                       equivalent to -vT
+             -T, --show-tabs          display TAB characters as ^I
+             -u                       (ignored)
+             -v, --show-nonprinting   use ^ and M- notation, except for LFD and TAB
+                 --help     display this help and exit
+                 --version  output version information and exit
+                  equivalent to -vET
+             
+$ tac --> See the complete content inside a file..       
+       $ tac file-name   
+             -b, --before             attach the separator before instead of after
+             -r, --regex              interpret the separator as a regular expression
+             -s, --separator=STRING   use STRING as the separator instead of newline
+                 --help     display this help and exit
+                 --version  output version information and exit
+
+           
+$head --> Print from starting of the file 
+                 $ head <file-name>        
+                     -b, --before             attach the separator before instead of after
+                     -r, --regex              interpret the separator as a regular expression
+                     -s, --separator=STRING   use STRING as the separator instead of newline
+                         --help     display this help and exit
+                         --version  output version information and exit
+                         
+$ tail --> Print from ending of the file 
+                $tail <file-name>
+                  -c, --bytes=K            output the last K bytes; or use -c +K to output bytes starting with the Kth of each file
+                  -f, --follow[={name|descriptor}] output appended data as the file grows;
+                                             an absent option argument means 'descriptor'
+                  -F                       same as --follow=name --retry
+                  -n, --lines=K            output the last K lines, instead of the last 10;
+                  -q, --quiet, --silent    never output headers giving file names
+                      --retry              keep trying to open a file if it is inaccessible
+                  -s, --sleep-interval=N   with -f, sleep for approximately N seconds  with inotify and --pid=P, check process P at least once every N seconds
+                  -v, --verbose            always output headers giving file names
+                      --help     display this help and exit
+                      --version  output version information and exit
+
+$ cat -> Column based filter 
+        Syntax: cut -d delimeter -f number file 
+        $ cut -d : -f 1 passwd 
+        $ cut -d : -f 1,5 passwd
+        $ cut -d : -f 1-5 passwd
+        
+        
+MEMORY COMMANDS:
+
+$ df --> report file system disk space usage
+          $ df
+$ du --> estimate file space usage
+          $ du –sh <file dir>
+          
+
+EDITORS:
+ 
+    ** vi / vim (so widely used)
+    ** gedit
+    ** nano
+
+
+NETWORK COMMANDS:
+
+$ ifconfig --> configure a network interface
+             $ ifconfig eth0
+             
+$ ping --> check vether the Connect to network hosts
+              $ ping <IP Adderss/host name>
+$ who --> show who is logged on
+           $ who
+           $ who am i
 
