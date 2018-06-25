@@ -265,4 +265,55 @@ $ ping --> check vether the Connect to network hosts
 $ who --> show who is logged on
            $ who
            $ who am i
+           
+           
+ UTILTIES:
+ 
+--> Downloading the files can be done with "wget" command.
+          By default wget command is not installed in your system.
+          
+          $ sudo yum install wget -y (CentOS/RHEL Family)
+            --> Pre Existing in UBUNTU 
+          
+          Now you can download the file using wget.
+          Syntax: wget <URL>
+          
+          
+--> Browsing over command line
+          $ curl <URL>
+          
+--> Also, You can download the files with curl command.
+          $ curl URL -o filename
+          
+--> Compression Utilities.
+           -> Extract a tar file.
+              $ tar -xf file.tar.gz / file.tar
+        tar does not apply compression it is only a packing tool to create a file from multiple files and directories.
+                But the compression is applied with 
+                     gunzip  -> .gz
+                       unzip2 -> .bz2
 
+
+PIPES: (|)
+    Pipes will convert STDOUT to STDIN
+
+
+Restart /Shutdown:
+     
+     Restart:
+        $ sudo init 6
+        $ sudo reboot
+        $ sudo shutdown -r now
+    
+  Shutdown:
+   
+       $ sudo init 0
+       $ sudo halt
+       $ sudo shutdown -h now
+
+--> To verify whether the system is rebooted or not. 
+    $ uptime
+
+
+          
+         
