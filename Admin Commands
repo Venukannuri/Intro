@@ -23,17 +23,17 @@ $ sudo <command>
        
    Users:
      -> TO create a user, use the following.
-        $ sudo useradd -g demo raju
+        $ sudo useradd -g demo Venu
         
      -> To check whether the user is added or not 
-        $ id raju
-        $ cat /etc/passwd | grep raju
+        $ id Venuid 
+        $ cat /etc/passwd | grep Venu
         
      -> Add user to other groups. 
-        $ sudo usermod -a -G adm raju
+        $ sudo usermod -a -G adm Venu
         
-     -> To set a password to raju user
-        $ sudo passwd raju
+     -> To set a password to Venu user
+        $ sudo passwd Venu
         
      -> To swtich from one user to another user then use "su"
-        $ su -  raju
+        $ su -  Venu
