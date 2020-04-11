@@ -5,6 +5,16 @@ Root logins are not allowed in companies and we alternatively use sudo to gain a
 
 All the commands we are going to perform we will add sudo to starting of the command.
 
+Linux Prompts:
+    $ -> Normal User
+    # -> Root User (Administrator)
+
+Linux Command Standard Syntax:
+Command-name {options} {inputs} 
+
+Dot (.) denotes present working directory 
+DotDot(..) denotes parent directory 
+
 $ sudo <command>
   The above command will be executed as a root user and also it will be logged in the system.
   
