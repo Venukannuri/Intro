@@ -108,6 +108,9 @@ $ groupadd --> create a new group
               eg: $ groupadd dba
    How to find out group craeted or not
          $ cat/etc/group | grep dbacd /home
+
+   List All Groups
+         $ less /etc/group 
          
 $ passwd --> change the set password from existed user
          $ passwd <user-name>
@@ -233,7 +236,15 @@ $ tail --> Print from ending of the file
                       --help     display this help and exit
                       --version  output version information and exit
 
-$ cat -> Column based filter 
+$ cut -> Column based filter 
+       
+       Syntax: $cut -c [(k)-(n)/(k),(n)/(n)]
+       
+       To extract the specific bytes  
+        $ cut -b 1,2,3 test         List without ranges            
+        $ cut -b 1-3,5-7 test       List with ranges
+        $ cut -d : -f 1-5 passwd
+
         Syntax: cut -d delimeter -f number file 
         $ cut -d : -f 1 passwd 
         $ cut -d : -f 1,5 passwd
@@ -314,6 +325,20 @@ Restart /Shutdown:
 --> To verify whether the system is rebooted or not. 
     $ uptime
 
-
-          
-         
+--> Finding Files:
+    -> Finding the files can be done with "find" command.
+        Syntax: find <location> <criteria> 
+        Ex: find / -name sample.conf
+            find /boot -type d 
+            find / -name xyz -type d
+            find / -name xyz -type f
+            find / -name "*.conf"
+            
+ --> Finding the files can be done also with "locate" command (Only in Redhat family)
+       By default that package (software) is not available by default.
+       In order to install it just follow the following commands.
+        $ sudo yum install mlocate -y 
+        $ sudo updatedb 
+        
+-->  Now you can find the files using locate command.
+        $ locate "*.conf"
